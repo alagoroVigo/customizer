@@ -1,0 +1,14 @@
+{include="header"}
+
+<div class="header"><h1>FS customizer</h1></div>
+<div class="container">
+    <form id='f-customize' name="f-customize" class="form" method="post"  
+          action="{$fsc->url()}" enctype="multipart/form-data">
+        <label class="control-label">favicon</label>
+        <input type="file" id="favicon" name="favicon" accept="image/ico"/>
+
+        <button type="submit">Aceptar</button>
+    </form>
+</div>
+
+{include="footer"}
