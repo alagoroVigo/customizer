@@ -26,7 +26,7 @@ class ctm_customize extends fs_controller {
 
         if (isset($files['favicon'])) {
             $fichero = $files['favicon'];
-            $filename = tempnam('plugins/customizer/files', 'icono' . '_');
+            $filename = tempnam(__DIR__.'/../files', 'icono' . '_');
             move_uploaded_file($fichero['tmp_name'], $filename);
 
             if (file_exists($filename)) {
