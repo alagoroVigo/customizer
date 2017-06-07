@@ -24,6 +24,13 @@ class ctm_customize extends fs_controller {
 
         $files = $_FILES;
 
+        if(!is_dir('images')){
+            $this->new_message('No existe carpeta images. Creando...');
+            if(!mkdir('images')){
+                $this->new_error_msg('Error no se pudo crear carpeta images.');
+            }
+        }        
+        
         if (isset($files['favicon'])) {
             $fichero = $files['favicon'];
             $filename = tempnam(sys_get_temp_dir(), 'icono' . '_');
